@@ -1,14 +1,28 @@
 spring:
   application:
     name: vehiculos
+  
+server:
+  port: 0
     
 eureka:
   client:
     serviceUrl:
-       defaultZone: http://localhost:1111/eureka/      
+       defaultZone: http://localhost:8075/eureka/      
   instance:
     metadata-map:
-      instanceId: ${spring.application.name}:${server.port}  
+      instanceId: ${spring.application.name}:${server.port}
+      user.name: ${security.user.name}
+      user.password: ${security.user.password}
+ 
+security:
+  user:
+    name: user
+    password: pass 
+
+  basic:
+    enabled: false
+    
       
 ---
 
@@ -22,7 +36,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-       defaultZone: http://eureka-docker:1111/eureka/      
+       defaultZone: http://eureka-docker:8075/eureka/      
   instance:
     prefer-ip-address: true
     metadata-map:
