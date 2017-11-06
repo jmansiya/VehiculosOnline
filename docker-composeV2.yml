@@ -1,0 +1,24 @@
+version: '2'
+services:
+  eurekaservice:
+    image: josemansilla/microservice_registration:1.0.0-SNAPSHOT
+    ports:
+      - 8075:8075
+  mongodb:
+    image: mongo
+  loadBalancer:    
+    image: josemansilla/edgeservice:1.0.0
+    links:
+      - eurekaservice:eureka-docker
+    ports:
+      - 8085:8085
+    environment:
+     - SPRING_PROFILES_ACTIVE=docker
+  consolaAdministracion:
+    image: josemansilla/consola-administracion:1.0.0
+    links:
+      - eurekaservice:eureka-docker
+    ports:
+      - 8088:8088
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
