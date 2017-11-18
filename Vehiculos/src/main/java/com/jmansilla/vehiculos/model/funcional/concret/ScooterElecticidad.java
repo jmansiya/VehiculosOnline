@@ -1,7 +1,8 @@
-package com.jmansilla.vehiculos.model.funcional;
+package com.jmansilla.vehiculos.model.funcional.concret;
 
 import java.text.MessageFormat;
 
+import com.jmansilla.vehiculos.model.funcional.abstracta.Scooter;
 import com.jmansilla.vehiculos.utiles.Color;
 import com.jmansilla.vehiculos.utiles.Mensajes;
 

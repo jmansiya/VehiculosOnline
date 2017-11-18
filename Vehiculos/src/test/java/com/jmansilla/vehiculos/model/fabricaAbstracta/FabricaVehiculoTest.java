@@ -14,7 +14,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.jmansilla.vehiculos.model.fabricaAbstracta.impl.FabricaVehiculoElectricidad;
-import com.jmansilla.vehiculos.model.funcional.Automovil;
+import com.jmansilla.vehiculos.model.funcional.abstracta.Automovil;
 import com.jmansilla.vehiculos.utiles.Color;
 import com.jmansilla.vehiculos.utiles.Mensajes;
 

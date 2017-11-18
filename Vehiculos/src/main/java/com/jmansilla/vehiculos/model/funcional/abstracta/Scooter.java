@@ -1,4 +1,4 @@
-package com.jmansilla.vehiculos.model.funcional;
+package com.jmansilla.vehiculos.model.funcional.abstracta;
 
 import com.jmansilla.vehiculos.utiles.Color;
 

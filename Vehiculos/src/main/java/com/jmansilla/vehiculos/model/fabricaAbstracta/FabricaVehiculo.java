@@ -6,8 +6,8 @@ package com.jmansilla.vehiculos.model.fabricaAbstracta;
  * Patron Abstract Factory
  */
 
-import com.jmansilla.vehiculos.model.funcional.Automovil;
-import com.jmansilla.vehiculos.model.funcional.Scooter;
+import com.jmansilla.vehiculos.model.funcional.abstracta.Automovil;
+import com.jmansilla.vehiculos.model.funcional.abstracta.Scooter;
 import com.jmansilla.vehiculos.utiles.Color;
 
 public interface FabricaVehiculo {

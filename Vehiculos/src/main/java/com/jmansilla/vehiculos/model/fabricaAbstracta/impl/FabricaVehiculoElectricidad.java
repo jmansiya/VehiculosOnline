@@ -1,10 +1,10 @@
 package com.jmansilla.vehiculos.model.fabricaAbstracta.impl;
 
 import com.jmansilla.vehiculos.model.fabricaAbstracta.FabricaVehiculo;
-import com.jmansilla.vehiculos.model.funcional.Automovil;
-import com.jmansilla.vehiculos.model.funcional.AutomovilElectricidad;
-import com.jmansilla.vehiculos.model.funcional.Scooter;
-import com.jmansilla.vehiculos.model.funcional.ScooterElecticidad;
+import com.jmansilla.vehiculos.model.funcional.abstracta.Automovil;
+import com.jmansilla.vehiculos.model.funcional.abstracta.Scooter;
+import com.jmansilla.vehiculos.model.funcional.concret.AutomovilElectricidad;
+import com.jmansilla.vehiculos.model.funcional.concret.ScooterElecticidad;
 import com.jmansilla.vehiculos.utiles.Color;
 
 public class FabricaVehiculoElectricidad implements FabricaVehiculo {
