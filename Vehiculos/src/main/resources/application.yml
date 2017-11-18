@@ -23,6 +23,9 @@ security:
   basic:
     enabled: false
     
+logging:  
+  file: ../logs/${spring.application.name}.log
+    
       
 ---
 
