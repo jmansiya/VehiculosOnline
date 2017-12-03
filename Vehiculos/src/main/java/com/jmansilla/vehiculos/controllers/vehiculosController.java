@@ -2,6 +2,7 @@ package com.jmansilla.vehiculos.controllers;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,7 +18,7 @@ public class vehiculosController {
 		lista.add("Jose");
 		lista.add("Maribel");
 		
-		lista.stream().filter(e -> e.equals("Jose"));
-		return lista;
+		List<String> resultado = lista.stream().filter(e -> e.equals("Jose")).collect(Collectors.toList());
+		return resultado;
 	}
 }

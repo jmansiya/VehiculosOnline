@@ -14,7 +14,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.jmansilla.vehiculos.model.fabricaAbstracta.impl.FabricaVehiculoElectricidad;
-import com.jmansilla.vehiculos.model.funcional.abstracta.Automovil;
+import com.jmansilla.vehiculos.model.funcional.abstracta.AutomovilDto;
 import com.jmansilla.vehiculos.utiles.Color;
 import com.jmansilla.vehiculos.utiles.Mensajes;
 
@@ -28,7 +28,7 @@ public class FabricaVehiculoTest {
 	public void tesGeneramosVehiculosElectricos() {
 		FabricaVehiculo fabrica = new FabricaVehiculoElectricidad();
 		
-		List<Automovil> lAutomoviles = new ArrayList<>();
+		List<AutomovilDto> lAutomoviles = new ArrayList<>();
 		lAutomoviles.add(fabrica.crearAutomovil("Opel Insignia", Color.BLANCO, 134, 551.0));
 		lAutomoviles.add(fabrica.crearAutomovil("Renault Talisma", Color.NEGRO, 135, 500));
 		lAutomoviles.add(fabrica.crearAutomovil("Renaul Clio", Color.ROJO, 85, 350.1));

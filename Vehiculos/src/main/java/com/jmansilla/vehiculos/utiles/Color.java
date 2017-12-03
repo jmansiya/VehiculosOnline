@@ -1,5 +1,8 @@
 package com.jmansilla.vehiculos.utiles;
 
+import java.util.Optional;
+import java.util.stream.Stream;
+
 public enum Color {
 	ROJO(1, "rojo", 100.0),
 	BLANCO(2, "blanco roto", 0),
@@ -26,5 +29,16 @@ public enum Color {
 		return precio;
 	}
 	
+	public static Color getByCodigo(int codigo) {
+		Optional<Color> optionalColor = Stream.of(Color.values()).filter(e -> e.getCodigo() == codigo)
+			.findFirst();
+		
+		if (optionalColor.isPresent()) {
+			return optionalColor.get();
+		} else {
+			return null;
+		}
+		
+	}
 	
 }

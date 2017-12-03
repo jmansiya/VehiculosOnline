@@ -1,19 +1,32 @@
 package com.jmansilla.vehiculos.model.funcional.abstracta;
 
 import com.jmansilla.vehiculos.utiles.Color;
+import com.jmansilla.vehiculos.utiles.TiposAutomoviles;
 
-public abstract class Automovil {
+public abstract class AutomovilDto extends AbstractDto {
 	protected String modelo;
 	protected Color color;
 	protected int potencia;
 	protected double espacio;
+	protected TiposAutomoviles tipo;
 	
-	public Automovil(String modelo, Color color, int potencia, double espacio) {
+	public AutomovilDto() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public AutomovilDto(String id) {
+		super(id);
+		// TODO Auto-generated constructor stub
+	}
+
+	public AutomovilDto(String modelo, Color color, int potencia, double espacio, TiposAutomoviles tipo) {
 		super();
 		this.modelo = modelo;
 		this.color = color;
 		this.potencia = potencia;
 		this.espacio = espacio;
+		this.tipo = tipo;
 	}
 
 	public String getModelo() {
@@ -49,4 +62,12 @@ public abstract class Automovil {
 	}
 	
 	public abstract String mostrarCaracteristicas();
+
+	public TiposAutomoviles getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TiposAutomoviles tipo) {
+		this.tipo = tipo;
+	}
 }

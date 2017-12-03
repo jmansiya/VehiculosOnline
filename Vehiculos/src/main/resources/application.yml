@@ -1,7 +1,10 @@
 spring:
   application:
     name: vehiculos
-  
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/vehiculos
+
 server:
   port: 0
     
@@ -25,8 +28,7 @@ security:
     
 logging:  
   file: ../logs/${spring.application.name}.log
-    
-      
+
 ---
 
 spring:
@@ -34,7 +36,7 @@ spring:
  
   data:
     mongodb:
-      uri: mongodb://mongodb/microserviceblog
+      uri: mongodb://mongodb/vehiculos
 
 eureka:
   client:

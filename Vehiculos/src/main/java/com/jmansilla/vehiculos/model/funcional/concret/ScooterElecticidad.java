@@ -2,11 +2,11 @@ package com.jmansilla.vehiculos.model.funcional.concret;
 
 import java.text.MessageFormat;
 
-import com.jmansilla.vehiculos.model.funcional.abstracta.Scooter;
+import com.jmansilla.vehiculos.model.funcional.abstracta.ScooterDto;
 import com.jmansilla.vehiculos.utiles.Color;
 import com.jmansilla.vehiculos.utiles.Mensajes;
 
-public class ScooterElecticidad extends Scooter {
+public class ScooterElecticidad extends ScooterDto {
 	
 	public ScooterElecticidad(String modelo, Color color, int potencia) {
 		super(modelo, color, potencia);

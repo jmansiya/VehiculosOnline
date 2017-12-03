@@ -1,18 +1,25 @@
-package com.jmansilla.vehiculos.model.funcional.abstracta;
+package com.jmansilla.vehiculos.data.model;
+
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.jmansilla.vehiculos.utiles.Color;
 
-public abstract class Scooter {
-	protected String modelo;
-	protected Color color;
-	protected int potencia;
-	
+@Document
+public class Scooter extends BaseEntity{
+	private String modelo;
+	private Color color;
+	private int potencia;
+
+	public Scooter() {
+		super();
+	}
 	public Scooter(String modelo, Color color, int potencia) {
 		super();
 		this.modelo = modelo;
 		this.color = color;
 		this.potencia = potencia;
 	}
+
 	public String getModelo() {
 		return modelo;
 	}
@@ -32,5 +39,4 @@ public abstract class Scooter {
 		this.potencia = potencia;
 	}
 	
-	public abstract String mostrarCaracteristicas();
 }

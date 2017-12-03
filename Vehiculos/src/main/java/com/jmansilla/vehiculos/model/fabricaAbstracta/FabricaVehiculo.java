@@ -6,12 +6,12 @@ package com.jmansilla.vehiculos.model.fabricaAbstracta;
  * Patron Abstract Factory
  */
 
-import com.jmansilla.vehiculos.model.funcional.abstracta.Automovil;
-import com.jmansilla.vehiculos.model.funcional.abstracta.Scooter;
+import com.jmansilla.vehiculos.model.funcional.abstracta.AutomovilDto;
+import com.jmansilla.vehiculos.model.funcional.abstracta.ScooterDto;
 import com.jmansilla.vehiculos.utiles.Color;
 
 public interface FabricaVehiculo {
-	Automovil crearAutomovil(String modelo, Color color, int potencia, double espacio);
+	AutomovilDto crearAutomovil(String modelo, Color color, int potencia, double espacio);
 	
-	Scooter crearScooter(String modelo, Color color, int potencia);
+	ScooterDto crearScooter(String modelo, Color color, int potencia);
 }
